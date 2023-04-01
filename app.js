@@ -47,6 +47,18 @@ add.addEventListener("click", e => {
         let todoItem = e.target.parentElement;
 
         todoItem.addEventListener("animationend", () => {
+            
+                // remove from local storage
+            let text = todoItem.children[0].innerText;
+            let myListArray = JSON.parse(localStorage.getItem("list"));
+            myListArray.forEach((item, index) => {
+                if (item.todoText == text) {
+                    myListArray.splice(index, 1);
+                    localStorage.setItem("list", JSON.stringify(myListArray));
+                }
+            })
+            
+            
             todoItem.remove();
         })
 
@@ -117,6 +129,17 @@ if (myList !== null) {
             let todoItem = e.target.parentElement;
     
             todoItem.addEventListener("animationend", () => {
+                
+                // remove from local storage
+                let text = todoItem.children[0].innerText;
+                let myListArray = JSON.parse(localStorage.getItem("list"));
+                myListArray.forEach((item, index) => {
+                    if (item.todoText == text) {
+                        myListArray.splice(index, 1);
+                        localStorage.setItem("list", JSON.stringify(myListArray));
+                    }
+                })
+
                 todoItem.remove();
             })
     
