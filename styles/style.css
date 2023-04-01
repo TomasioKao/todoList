@@ -118,7 +118,7 @@ section div.todo p.todo-time {
 
 section div.todo button {
   padding: 0.25rem, 0.5rem;
-  font-size: 1.75rem;
+  font-size: 1.90rem;
   border: none;
   cursor: pointer;
   color: white;
@@ -130,6 +130,28 @@ section div.todo button.complete {
 
 section div.todo button.trash {
   background-color: red;
+}
+
+div.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0rem;
+}
+
+div.sort button {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  cursor: pointer;
+  background-color: #009272;
+  color: white;
 }
 
 .done {
